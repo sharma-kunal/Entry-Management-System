@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static  'css/index.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Home Page</title>
+</head>
+<body>
+<div class="index-box">
+<div class="buttons_box">
+    <br>
+    <button class="btn waves-effect waves-light" name="checkin" onclick="window.location.href = '/checkIn';"><i class="material-icons right">Check In</i></button>
+    <button class="btn waves-effect waves-light" name="checkout" onclick="window.location.href = '/checkOut';"><i class="material-icons right">Check Out</i></button>
+</div>
+</div>
+</body>
+</html>

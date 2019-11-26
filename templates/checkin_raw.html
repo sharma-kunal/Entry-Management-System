@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CheckIn</title>
+</head>
+<body>
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-danger" role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+<h2>Visitor's Details</h2><br>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="visitor_name" placeholder="Name"><br><br>
+        Phone No.:&nbsp&nbsp<input type="text" name="visitor_number" placeholder="Phone No."><br><br>
+        Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="email" name="visitor_email" placeholder="Email"><br><br>
+        <h2>Host Details</h2>
+        Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="host_name" placeholder="Name"><br><br>
+        Phone No.:&nbsp<input type="text" name="host_number" placeholder="Phone No."><br><br>
+        Email:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="email" name="host_email" placeholder="Email"><br><br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button type="submit" name="submit">Submit</button>
+    </form>
+</body>
+</html>

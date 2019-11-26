@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static  'css/checkout.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>CheckOut</title>
+</head>
+<body>
+<div class="error">
+    {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger alert-dismissible">
+                <strong>{{ error|escape }}</strong>
+            </div>
+            {% endfor %}
+            {% endfor %}
+    {% endif %}
+</div>
+<div class="checkout-box">
+<div class="checkOut">
+    {% if msg %}
+        <div class="alert alert-success"><strong>{{ msg }}</strong><br>
+            <a href="/">Click Here</a> to return to Home Page
+        </div>
+    {% endif %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-danger" role="alert">
+                {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+    <form method="post">{% csrf_token %}
+        <div class="phone-no">
+        {% for field in form %}
+            <center></p>{{ field }}</p></center>
+        {% endfor %}
+        </div>
+        <center><button class='btn waves-effect waves-light' type="submit" name="CheckOut"><i class="material-icons right">Check Out</i></button></center>
+    </form>
+</div>
+</div>
+</body>
+</html>

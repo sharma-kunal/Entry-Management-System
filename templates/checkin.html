@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static  'css/checkin.css'%}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>CheckIn</title>
+</head>
+<body>
+<div class="error">
+    {% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <center><div class="alert alert-danger">
+                <i class="material-icons">error</i>
+                <strong>{{ error|escape }}</strong>
+            </div></center>
+            {% endfor %}
+            {% endfor %}
+    {% endif %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-danger" role="alert">
+                {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+</div>
+<div class="success">
+    {% if success %}
+        <div class="alert alert-success">
+            <strong>Congratulations!</strong> Checked In Successfully.&nbsp&nbsp<a href="/">Click Here</a> to return to Home Page
+        </div>
+    {% endif %}
+</div>
+<div class="login-page">
+<div class="checkin_form">
+    <form method="post">{% csrf_token %}
+        <br>
+        <center> <h2><b><i>Visitor's Details</i></b></h2></center><br>
+            {% for field in form %}
+            {% if forloop.counter == 4 %}
+            <br><br>
+        <center> <h2><b><i>Host Details</i></b></h2></center><br>
+            {% endif %}
+        <center></p>{{ field }}</p></center>
+            {% endfor %}
+        <br><center><button class='btn waves-effect waves-light' type="submit" name="CheckIn"><i class="material-icons right">Check In</i></button></center>
+    </form>
+</div>
+</div>
+</body>
+</html>
