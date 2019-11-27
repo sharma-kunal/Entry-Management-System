@@ -2,8 +2,8 @@
 
 An Entry Management System using Django (A Python-based free and open-source web framework) 
 
-In this project you have a management software which will take details from the visitor and when the user `Check's In`, it will inform the host about the meeting (vai Mail and SMS) with all details of the Visitor. 
-And when the Visitor `Check's Out` it will inform the Visitor (via Mail and SMS) all details about all the information about the meeting attended.
+In this project you have a management software which will take details from the visitor and when the visitor `Check's In` for the meeting, server will automatically inform the host about the meeting (vai Mail and SMS) with all details of the Visitor. 
+And when the Visitor `Check's Out` it will send the details (via Mail and SMS) to the Visitor about the meeting attended.
 
 ## Preview
 
@@ -52,7 +52,7 @@ forms/views.py
 ![API_KEY](https://github.com/sharma-kunal/internship_project/blob/master/readme_data/api_key.png)
 
 
-## Running
+## Installation and Running
 
 * Run the command 
 
