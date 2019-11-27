@@ -2,8 +2,8 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-SENDER_EMAIL = 'kuunaalsharma88@gmail.com'
-PASSWORD = '9639522583'
+SENDER_EMAIL = '<Email Id for Sending Automated Email>'
+PASSWORD = '<Password for the above SENDER_EMAIL>'
 
 
 # Mail(visitor_name, visitor_phone, visitor_email, checkin, checkOut, host_name, host_phone, host_email)

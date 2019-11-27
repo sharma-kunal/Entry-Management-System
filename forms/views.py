@@ -10,9 +10,8 @@ import requests
 PHONE_REGEX = r'\(?\d+\)?[-.\s]?\d+[-.\s]?\d+'
 EMAIL_REGEX = r'\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b'
 URL = 'https://www.way2sms.com/api/v1/sendCampaign'
-API_KEY = 'PHD345XPDWZNLAUWGMHR5RHCH8V6JHUU'
-SECRET_KEY = '6DUTC15GBBRI2SMJ'
-ADMIN_NUMBER = '8279718127'
+API_KEY = '<API KEY given by way2sms.com>'
+SECRET_KEY = '<SECRET KEY given by way2sms.com>'
 
 
 def index(request):
@@ -100,7 +99,7 @@ def send_message(send_to, visitor_name, visitor_number, visitor_email, checkin, 
         'phone': send_to,
         'message': host_message(visitor_name, visitor_number, visitor_email, checkin) if not checkout else visitor_message(
             visitor_name, visitor_number, checkin, checkout, host_name),
-        'senderid': ADMIN_NUMBER
+        'senderid': '1'
     }
     return requests.post(URL, req_params)
 
