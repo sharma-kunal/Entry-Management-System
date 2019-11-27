@@ -105,14 +105,14 @@ def send_message(send_to, visitor_name, visitor_number, visitor_email, checkin, 
 
 
 def host_message(visitor_name, visitor_number, visitor_email, checkin):
-    msg = "Visitor's Name:\t\t\t" + visitor_name + "\nVisitor's Phone No:\t" + visitor_number \
+    msg = "Visitor's Name:\t" + visitor_name + "\nVisitor's Phone No:\t" + visitor_number \
         + "\nVisitor's Email:\t" + visitor_email + "\nVisitor's CheckIn Time:\t" + str(checkin) + " (UTC)"
     print(msg)
     return msg
 
 
 def visitor_message(visitor_name, visitor_number, checkin, checkout, host_name):
-    msg = "Name:\t\t\t" + visitor_name + "\nPhone No:\t" + str(visitor_number) + "\nCheckIn Time:\t" \
-        + str(checkin) + " (UTC)" + "\nCheckOut Time:\t" + str(checkout) + "\nHost Name:\t" + host_name
+    msg = "Name:\t" + visitor_name + "\nPhone No:\t" + str(visitor_number) + "\nCheckIn Time:\t" \
+        + str(checkin) + " (UTC)" + "\nCheckOut Time:\t" + str(checkout) + " (UTC)" +"\nHost Name:\t" + host_name
     print(msg)
     return msg
