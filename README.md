@@ -51,7 +51,7 @@ If not you can do so by following the steps given on [Allow Less Sucure Apps](ht
 ---
 
 
-* You also need to make an ID on the website [way2sms](https://www.way2sms.com/), and copy the `API_KEY` and `Secret_key` from the API section [API](https://www.way2sms.com/userApi) of the website which we will use to send SMS.
+* You also need to SignUp on [way2sms](https://www.way2sms.com/), and copy the `API_KEY` and `Secret_key` from the API section [API](https://www.way2sms.com/userApi) of the website which we will use to send SMS.
 
 Now Paste the API_KEY and SECRET_KEY in the file `views.py`
 
