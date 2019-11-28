@@ -43,7 +43,7 @@ forms/Mail.py
 
 * You also need to make an ID on the website [way2sms](https://www.way2sms.com/), and copy the `API_KEY` and `Secret_key` from the API section [API](https://www.way2sms.com/userApi) of the website which we will use to send SMS.
 
-* Now Paste the API_KEY and SECRET_KEY in the file `views.py`
+Now Paste the API_KEY and SECRET_KEY in the file `views.py`
 
 ```
 forms/views.py
@@ -87,3 +87,46 @@ If the browser does not open automatically then,
 ```
 
 Congratulations, the code is up and running
+
+
+## Django Admin
+
+You can see the data inside the database in the Django Admin Panel.
+
+Just go to the link
+
+```
+127.0.0.1:<port number you specified above> (by default 8000)/admin
+
+e.g. 127.0.0.1:8000/admin
+```
+
+Now it will ask for username and password. I have already created a superuser with the following details
+
+```
+Username: test
+Password: test@1234
+```
+
+But you can create another Super User with your preferred Username and Password by running the command 
+
+```
+python3 manage.py createsuperuser
+```
+
+and filling the details as they appear (You can leave the email option blank)
+
+For deleting a superuser, run the command
+
+```
+python3 manage.py shell
+```
+
+Inside the shell, execute the following lines
+
+```
+$ from django.contrib.auth.models import User
+$ User.objects.get(username="<username>", is_superuser=True).delete()
+```
+
+replacing the `username` tag with the username you want to delete.
