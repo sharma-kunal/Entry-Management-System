@@ -1,4 +1,4 @@
-# Entry Management Software
+# Entry Management System
 
 An Entry Management System using Django (A Python-based free and open-source web framework) 
 
